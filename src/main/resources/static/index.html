@@ -38,9 +38,9 @@
     <img class="logo" src="merito-logo.png" alt="Uniwersytet WSB Merito Wrocław">
     <span class="status"><span class="dot" aria-hidden="true"></span>Backend działa</span>
     <h1>Wprowadzenie do technologii backendowych</h1>
-    <p>Tę stronę serwuje Wasza aplikacja Spring Boot z pliku <code>src/main/resources/static/index.html</code>.
-       Na LAB 01 wypełnijcie poniższą wizytówkę projektu. LAB 02 zaczyna się od jej prezentacji:
-       uruchamiacie aplikację i pokazujecie tę stronę.</p>
+<!--    <p>Tę stronę serwuje Wasza aplikacja Spring Boot z pliku <code>src/main/resources/static/index.html</code>.-->
+<!--       Na LAB 01 wypełnijcie poniższą wizytówkę projektu. LAB 02 zaczyna się od jej prezentacji:-->
+<!--       uruchamiacie aplikację i pokazujecie tę stronę.</p>-->
   </header>
 
   <!-- LAB 01: wizytówka Waszego projektu, na jej podstawie prezentujecie projekt na początku LAB 02.
@@ -60,27 +60,27 @@
     <!-- <p class="muted">Na kolejnych laboratoriach dopisujcie tu kolejne punkty.</p> -->
   </section>
 
-  <section class="card">
-    <h2>1. Zajrzyjcie do bazy danych</h2>
-    <p>Aplikacja ma wbudowaną bazę H2. Na start jest w niej jedna tabela, <code>user_account</code>, z kontami z pliku <code>data.sql</code>.</p>
-    <table>
-      <tr><td>JDBC URL</td><td><code>jdbc:h2:file:./data/wdtb</code></td></tr>
-      <tr><td>Użytkownik</td><td><code>sa</code></td></tr>
-      <tr><td>Hasło</td><td>(puste)</td></tr>
-    </table>
-    <a class="btn" href="/h2-console">Otwórz konsolę H2</a>
-    <p class="muted" style="margin-top:12px">Spróbujcie zapytania:</p>
-    <pre>SELECT role, COUNT(*) FROM user_account GROUP BY role;</pre>
-  </section>
+<!--  <section class="card">-->
+<!--    <h2>1. Zajrzyjcie do bazy danych</h2>-->
+<!--    <p>Aplikacja ma wbudowaną bazę H2. Na start jest w niej jedna tabela, <code>user_account</code>, z kontami z pliku <code>data.sql</code>.</p>-->
+<!--    <table>-->
+<!--      <tr><td>JDBC URL</td><td><code>jdbc:h2:file:./data/wdtb</code></td></tr>-->
+<!--      <tr><td>Użytkownik</td><td><code>sa</code></td></tr>-->
+<!--      <tr><td>Hasło</td><td>(puste)</td></tr>-->
+<!--    </table>-->
+<!--    <a class="btn" href="/h2-console">Otwórz konsolę H2</a>-->
+<!--    <p class="muted" style="margin-top:12px">Spróbujcie zapytania:</p>-->
+<!--    <pre>SELECT role, COUNT(*) FROM user_account GROUP BY role;</pre>-->
+<!--  </section>-->
 
-  <section class="card">
-    <h2>2. Przydatne adresy</h2>
-    <table>
-      <tr><td>Konsola bazy</td><td><a href="/h2-console"><code>/h2-console</code></a></td></tr>
-      <tr><td>REST API</td><td><code>/api/…</code> (od LAB 05)</td></tr>
-      <tr><td>Dokumentacja API</td><td><a href="/swagger-ui.html"><code>/swagger-ui.html</code></a> (od LAB 05)</td></tr>
-    </table>
-  </section>
+<!--  <section class="card">-->
+<!--    <h2>2. Przydatne adresy</h2>-->
+<!--    <table>-->
+<!--      <tr><td>Konsola bazy</td><td><a href="/h2-console"><code>/h2-console</code></a></td></tr>-->
+<!--      <tr><td>REST API</td><td><code>/api/…</code> (od LAB 05)</td></tr>-->
+<!--      <tr><td>Dokumentacja API</td><td><a href="/swagger-ui.html"><code>/swagger-ui.html</code></a> (od LAB 05)</td></tr>-->
+<!--    </table>-->
+<!--  </section>-->
 </main>
 </body>
 </html>
