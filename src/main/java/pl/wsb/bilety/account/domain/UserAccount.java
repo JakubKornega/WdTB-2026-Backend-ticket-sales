@@ -1,4 +1,4 @@
-package pl.wsb.ticket_sales.account.domain;
+package pl.wsb.bilety.account.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

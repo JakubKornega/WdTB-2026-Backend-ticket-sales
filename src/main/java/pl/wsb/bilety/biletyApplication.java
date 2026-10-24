@@ -1,4 +1,4 @@
-package pl.wsb.ticket_sales;
+package pl.wsb.bilety;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,9 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Reguła R1.01 sprawdza, czy to zrobiliście.
  */
 @SpringBootApplication
-public class ticket_salesApplication {
+public class biletyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ticket_salesApplication.class, args);
+        SpringApplication.run(biletyApplication.class, args);
     }
 }

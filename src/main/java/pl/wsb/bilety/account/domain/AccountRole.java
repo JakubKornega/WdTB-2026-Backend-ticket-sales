@@ -1,4 +1,4 @@
-package pl.wsb.ticket_sales.account.domain;
+package pl.wsb.bilety.account.domain;
 
 public enum AccountRole {
     USER,
