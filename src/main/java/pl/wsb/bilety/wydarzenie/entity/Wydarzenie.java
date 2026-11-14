@@ -2,6 +2,9 @@ package pl.wsb.bilety.wydarzenie.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import pl.wsb.bilety.bilet.entity.RodzajBiletu;
 
 @Entity
 @Table(name = "wydarzenie")
@@ -26,6 +29,9 @@ public class Wydarzenie {
     @Column(name = "status", nullable = false, length = 20)
     private String status;
 
+    @OneToMany(mappedBy = "wydarzenie")
+    private List<RodzajBiletu> rodzajeBiletow = new ArrayList<>();
+
     protected Wydarzenie() {
     }
 
@@ -43,4 +49,5 @@ public class Wydarzenie {
     public LocalDateTime getDataWydarzenia() { return dataWydarzenia; }
     public Integer getPojemnosc() { return pojemnosc; }
     public String getStatus() { return status; }
+    public List<RodzajBiletu> getRodzajeBiletow() { return rodzajeBiletow; }
 }

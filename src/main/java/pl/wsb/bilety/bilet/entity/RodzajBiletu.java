@@ -3,6 +3,7 @@ package pl.wsb.bilety.bilet.entity;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import pl.wsb.bilety.wydarzenie.entity.Wydarzenie;
 
 @Entity
 @Table(name = "rodzaj_biletu")
@@ -27,15 +28,21 @@ public class RodzajBiletu {
     @Column(name = "aktywny", nullable = false)
     private Boolean aktywny;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "wydarzenie_id", nullable = false)
+    private Wydarzenie wydarzenie;
+
     protected RodzajBiletu() {
     }
 
-    public RodzajBiletu(String nazwa, BigDecimal cena, Integer iloscDostepna, LocalDate poczatekSprzedazy, Boolean aktywny) {
+    public RodzajBiletu(String nazwa, BigDecimal cena, Integer iloscDostepna,
+                        LocalDate poczatekSprzedazy, Boolean aktywny, Wydarzenie wydarzenie) {
         this.nazwa = nazwa;
         this.cena = cena;
         this.iloscDostepna = iloscDostepna;
         this.poczatekSprzedazy = poczatekSprzedazy;
         this.aktywny = aktywny;
+        this.wydarzenie = wydarzenie;
     }
 
     public Long getId() { return id; }
@@ -44,4 +51,5 @@ public class RodzajBiletu {
     public Integer getIloscDostepna() { return iloscDostepna; }
     public LocalDate getPoczatekSprzedazy() { return poczatekSprzedazy; }
     public Boolean getAktywny() { return aktywny; }
+    public Wydarzenie getWydarzenie() { return wydarzenie; }
 }

@@ -2,6 +2,7 @@ package pl.wsb.bilety.klient.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import pl.wsb.bilety.account.domain.UserAccount;
 
 @Entity
 @Table(name = "klient")
@@ -26,15 +27,21 @@ public class Klient {
     @Column(name = "data_rejestracji", nullable = false)
     private LocalDate dataRejestracji;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_account_id")
+    private UserAccount konto;
+
     protected Klient() {
     }
 
-    public Klient(String imieNazwisko, String email, String telefon, String miasto, LocalDate dataRejestracji) {
+    public Klient(String imieNazwisko, String email, String telefon, String miasto,
+                  LocalDate dataRejestracji, UserAccount konto) {
         this.imieNazwisko = imieNazwisko;
         this.email = email;
         this.telefon = telefon;
         this.miasto = miasto;
         this.dataRejestracji = dataRejestracji;
+        this.konto = konto;
     }
 
     public Long getId() { return id; }
@@ -43,4 +50,5 @@ public class Klient {
     public String getTelefon() { return telefon; }
     public String getMiasto() { return miasto; }
     public LocalDate getDataRejestracji() { return dataRejestracji; }
+    public UserAccount getKonto() { return konto; }
 }
