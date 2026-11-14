@@ -29,7 +29,7 @@ public class Wydarzenie {
     @Column(name = "status", nullable = false, length = 20)
     private String status;
 
-    @OneToMany(mappedBy = "wydarzenie")
+    @OneToMany(mappedBy = "wydarzenie") /*wydarzenie ma listę swoich rodzajów biletów*/
     private List<RodzajBiletu> rodzajeBiletow = new ArrayList<>();
 
     protected Wydarzenie() {

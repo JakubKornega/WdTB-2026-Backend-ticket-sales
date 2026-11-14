@@ -27,7 +27,7 @@ public class Klient {
     @Column(name = "data_rejestracji", nullable = false)
     private LocalDate dataRejestracji;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY) /*klient ma najwyżej jedno konto użytkownika, a konto należy do najwyżej jednego klienta*/
     @JoinColumn(name = "user_account_id")
     private UserAccount konto;
 

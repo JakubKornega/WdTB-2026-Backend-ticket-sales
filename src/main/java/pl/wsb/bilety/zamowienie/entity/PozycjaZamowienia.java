@@ -12,6 +12,7 @@ public class PozycjaZamowienia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    /*jedno zamówienie ma wiele rodzajów biletów, a jeden rodzaj biletu jest w wielu zamówieniachś*/
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "zamowienie_id", nullable = false)
     private Zamowienie zamowienie;

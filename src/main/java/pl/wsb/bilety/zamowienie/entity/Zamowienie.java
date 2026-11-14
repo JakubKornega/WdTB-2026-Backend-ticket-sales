@@ -13,7 +13,7 @@ public class Zamowienie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false) /*zamówienie złożył jeden klient, a jeden klient może mieć wiele zamówień*/
     @JoinColumn(name = "klient_id", nullable = false)
     private Klient klient;
 

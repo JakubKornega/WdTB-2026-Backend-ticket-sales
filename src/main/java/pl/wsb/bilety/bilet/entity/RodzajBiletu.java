@@ -28,7 +28,7 @@ public class RodzajBiletu {
     @Column(name = "aktywny", nullable = false)
     private Boolean aktywny;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false) /*rodzaj biletu należy do jednego wydarzenia*/
     @JoinColumn(name = "wydarzenie_id", nullable = false)
     private Wydarzenie wydarzenie;
 
